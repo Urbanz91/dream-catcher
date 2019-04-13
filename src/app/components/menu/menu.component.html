@@ -1,11 +1,20 @@
 <mat-nav-list class="menu-block">
-  <mat-list-item class="menu-block__item">
-    My dreams
-  </mat-list-item>
-  <mat-list-item class="menu-block__item">
-    Dreams patterns
-  </mat-list-item>
-  <mat-list-item class="menu-block__item">
-    Statistic
-  </mat-list-item>
+  <div class="menu-block-item__wrapper" routerLinkActive="active">
+    <mat-list-item routerLink="/my-dreams"
+                   class="menu-block__item">
+      My dreams
+    </mat-list-item>
+  </div>
+  <div class="menu-block-item__wrapper" routerLinkActive="active">
+    <mat-list-item routerLink="/dreams-pattern"
+                   class="menu-block__item">
+      Dreams patterns
+    </mat-list-item>
+  </div>
+  <div class="menu-block-item__wrapper" routerLinkActive="active">
+    <mat-list-item routerLink="/dreams-statistic"
+                   class="menu-block__item">
+      Statistic
+    </mat-list-item>
+  </div>
 </mat-nav-list>
