@@ -42,10 +42,12 @@
   }
   &__date {
     position: absolute;
-    left: -50px;
+    left: -100px;
     top: 14px;
     display: flex;
     flex-flow: column;
+    text-align: center;
+    width: 100px;
     color: #5f5fc4;
     opacity: 0.7;
     font-weight: bold;

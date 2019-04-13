@@ -14,6 +14,7 @@ import { DreamsPatternComponent } from './components/main-block/dreams-pattern/d
 import { DreamsStatisticComponent } from './components/main-block/dreams-statistic/dreams-statistic.component';
 
 import { MoodParserPipe } from './pipes/mood-parser.pipe';
+import { DateParserPipe } from './pipes/date-parser.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MoodParserPipe } from './pipes/mood-parser.pipe';
     MyDreamsComponent,
     DreamsPatternComponent,
     DreamsStatisticComponent,
-    MoodParserPipe
+    MoodParserPipe,
+    DateParserPipe
   ],
   imports: [
     BrowserModule,
