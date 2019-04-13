@@ -1,3 +1,26 @@
-<p>
-  my-dreams works!
-</p>
+<div class="container">
+  <mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+      <span>My dreams</span>
+      <span class="toolbar__example-spacer"></span>
+      <button mat-icon-button>
+        <fa-icon [icon]="['fas', 'search']" size="lg"></fa-icon>
+      </button>
+      <button mat-icon-button>
+        <fa-icon [icon]="['fas', 'plus']" size="lg"></fa-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-card class="card hint">
+    <mat-card-title class="card__title">
+      Oops...
+    </mat-card-title>
+    <mat-card-content class="card__content">
+      <p class="card__text">
+        You do not have a single recorded dream, do you want to record?
+      </p>
+      <button mat-raised-button class="card__button">RECORD</button>
+    </mat-card-content>
+  </mat-card>
+    <img class="bg" src="../../../../assets/images/dreamcather_bg.svg">
+</div>
