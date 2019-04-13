@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularMaterial } from './components/angular-material/main';
+import { AngularMaterialModule } from './components/angular-material/main';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,9 +25,14 @@ import { DreamsStatisticComponent } from './components/main-block/dreams-statist
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularMaterial
+    AngularMaterialModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    library.add(fas);
+  }
+}
