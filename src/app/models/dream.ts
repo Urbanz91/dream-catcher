@@ -1,5 +1,10 @@
 export interface IDream {
-  date: string;
+  date: {
+    day: string, // 2 numbers
+    month: string, 
+    year: string,
+    fullDate: string // YYYY-MM-DD
+  }; 
   title: string;
   text: string;
   mood: number;

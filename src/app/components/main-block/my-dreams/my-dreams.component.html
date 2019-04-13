@@ -11,7 +11,7 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-card class="card hint">
+  <mat-card class="card hint" *ngIf="dreams.length === 0">
     <mat-card-title class="card__title">
       Oops...
     </mat-card-title>
@@ -22,5 +22,45 @@
       <button mat-raised-button class="card__button">RECORD</button>
     </mat-card-content>
   </mat-card>
+  <div class="card-wrapper" *ngIf="dreams.length !== 0">
+    <mat-card class="card" *ngFor="let dream of dreams">
+      <div class="card__date">
+        <span>{{dream.date.month}}</span>
+        <span>{{dream.date.day}}</span>
+      </div>
+      <div class="card__attr">
+        <fa-icon *ngIf="dream.nightmare"
+                 [icon]="['fas', 'ghost']" 
+                 size="lg" 
+                 matTooltip="Nightmare"
+                 style="margin-right:10px">
+        </fa-icon>
+        <fa-icon *ngIf="dream.conscious" 
+                 [icon]="['fas', 'gem']" 
+                 size="lg" 
+                 matTooltip="Conscious dream"
+                 style="margin-right:10px">
+        </fa-icon>
+        <fa-icon *ngIf="dream.mood" 
+                 [icon]="['fas', dream.mood | moodParser]" 
+                 size="lg"
+                 matTooltip="Your mood in dream">
+        </fa-icon>
+      </div>
+      <mat-card-title class="card__title">
+        {{dream.title}}
+      </mat-card-title>
+      <mat-card-content class="card__content">
+        <p class="card__text">
+          {{dream.text}}
+        </p>
+        <mat-chip-list class="card__tags">
+          <mat-chip class="card__tag" *ngFor="let tag of dream.tags">
+            {{tag}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
   <img class="bg" src="../../../../assets/images/dreamcather_bg.svg">
 </div>

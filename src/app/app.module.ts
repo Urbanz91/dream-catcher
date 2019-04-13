@@ -13,13 +13,16 @@ import { MyDreamsComponent } from './components/main-block/my-dreams/my-dreams.c
 import { DreamsPatternComponent } from './components/main-block/dreams-pattern/dreams-pattern.component';
 import { DreamsStatisticComponent } from './components/main-block/dreams-statistic/dreams-statistic.component';
 
+import { MoodParserPipe } from './pipes/mood-parser.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     MyDreamsComponent,
     DreamsPatternComponent,
-    DreamsStatisticComponent
+    DreamsStatisticComponent,
+    MoodParserPipe
   ],
   imports: [
     BrowserModule,
