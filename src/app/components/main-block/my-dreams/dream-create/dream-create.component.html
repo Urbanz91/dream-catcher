@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-card-title class="card__title">Record dream</mat-card-title>
+  <mat-card-content class="card__content">
+    <div class="card__title-date-wrapper">
+      <input class="card__dream-title card__input" 
+             type="text" 
+             placeholder="Title your dream">
+      <mat-form-field class="card__dream-date">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div #descriptionArea class="card__dream-description-wrapper">
+      <textarea class="card__dream-description card__input" placeholder="Describe your dream"></textarea>
+    </div>
+  </mat-card-content>
+</mat-card>
