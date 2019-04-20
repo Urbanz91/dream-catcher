@@ -11,9 +11,20 @@
   &__text {
     margin: 0;
   }
+  &__buttons {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+  }
   &__button {
     background-color: #5f5fc4;
     color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    &_secondary {
+      background-color: #fff;
+      color: #000;
+    }
   }
   &__input {
     height: 30px;
@@ -54,14 +65,17 @@
     height: 185px;
     resize: none;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 13px;
     font-weight: 300;
     padding: 10px;
     box-sizing: border-box;
   }
-  &__tags {
-    ::ng-deep .mat-chip-list-wrapper {
-      margin-top: 30px;
+  &__tags-field {
+    width: 100%;
+    margin-top: 10px;
+    ::ng-deep .mat-form-field-label {
+      color: #d5e0e1;
+      font-size: 13px;
     }
   }
   &__tag {
@@ -72,5 +86,38 @@
   &__attr {
     position: absolute;
     right: 10px;
+  }
+  &__choose-mood-text {
+    display: inline-block;
+  }
+  &__choose-mood-slider {
+    width: 400px;
+    ::ng-deep .mat-slider-thumb {
+      background-color: #5f5fc4;
+    }
+    ::ng-deep .mat-slider-track-fill {
+      background-color: #fff;
+    }
+  }
+  &__choose-mood-icon {
+    margin-left: 50px;
+  }
+  &__checkboxes {
+    display: flex;
+  }
+  &__checkbox {
+    &:last-child {
+      margin-left: 40px;
+    }
+    &.mat-checkbox-checked.mat-accent{
+      ::ng-deep .mat-checkbox-background {
+        background-color: #5f5fc4;
+      } 
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

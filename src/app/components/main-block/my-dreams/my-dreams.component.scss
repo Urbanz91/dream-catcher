@@ -40,6 +40,8 @@
   &__button {
     background-color: #5f5fc4;
     color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
   }
   &__date {
     position: absolute;
