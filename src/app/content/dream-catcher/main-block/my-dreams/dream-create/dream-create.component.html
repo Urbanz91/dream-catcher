@@ -1,0 +1,72 @@
+<mat-card class="card">
+  <form [formGroup]="dreamForm">
+    <mat-card-title class="card__title">Record dream</mat-card-title>
+    <mat-card-content class="card__content">
+      <div class="card__title-date-wrapper">
+        <input class="card__dream-title card__input" 
+               type="text" 
+               placeholder="Title your dream"
+               formControlName="title">
+        <mat-form-field class="card__dream-date">
+          <input matInput 
+                 [matDatepicker]="picker" 
+                 placeholder="Choose a date"
+                 formControlName="date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div #descriptionArea class="card__dream-description-wrapper">
+        <textarea class="card__dream-description card__input"
+                  placeholder="Describe your dream"
+                  formControlName="description">
+        </textarea>
+      </div>
+      <mat-form-field class="card__tags-field">
+        <mat-chip-list class="card__tags" #tagsList>
+          <mat-chip *ngFor="let tag of tags"
+                    [removable]="removable" 
+                    (removed)="removeTag(tag)"
+                    class="card__tag">
+            {{tag}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Add tags..."
+                 [matChipInputFor]="tagsList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="addTag($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      <div class="card__choose-mood">
+        <p class="card__choose-mood-text">
+          Choose your mood in dream
+        </p>
+        <fa-icon class="card__choose-mood-icon"
+                 *ngIf="amountMood" 
+                 [icon]="['fas', amountMood | moodParser]" 
+                 size="lg"
+                 matTooltip="Your mood in dream">
+        </fa-icon>
+        <mat-slider class="card__choose-mood-slider"
+                    (change)="changeMood($event)"
+                    [value]="amountMood"
+                    tickInterval="1"
+                    min="0"
+                    max="100"
+                    formControlName="mood">
+        </mat-slider>
+      </div>
+      <div class="card__footer">
+        <div class="card__checkboxes">
+          <mat-checkbox class="card__checkbox" formControlName="conscious">Lucid dream</mat-checkbox>
+          <mat-checkbox class="card__checkbox" formControlName="nightmare">Nightmare</mat-checkbox>
+        </div>
+        <div class="card__buttons">
+          <button mat-raised-button class="card__button card__button_secondary">Cancel</button>
+          <button mat-raised-button class="card__button">Confirm</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </form>
+</mat-card>
