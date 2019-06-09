@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-dreams.component.scss']
 })
 export class MyDreamsComponent {
-
+  public dreams: [] = [];
 }
