@@ -6,7 +6,7 @@ import * as moment from 'moment';
 })
 export class DateParserPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  public transform(value: string, args?: string): string {
     return moment(value).format(args);
   }
 

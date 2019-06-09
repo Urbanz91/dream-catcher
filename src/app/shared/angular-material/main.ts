@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
+// tslint:disable-next-line: variable-name
 export const AngularMaterialModule = [
   MatSidenavModule,
   MatListModule,
