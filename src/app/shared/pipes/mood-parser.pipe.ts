@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MoodParserPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  public transform(value: number): string {
     if (value <= 10) {
       return 'poop';
     } else if (value > 10 && value <= 25) {

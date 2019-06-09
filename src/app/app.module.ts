@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularMaterialModule } from './components/angular-material/main';
+import { AngularMaterialModule } from './shared/angular-material/main';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -12,14 +12,14 @@ import { NgModule } from '@angular/core';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { MyDreamsComponent } from './components/main-block/my-dreams/my-dreams.component';
-import { DreamsPatternComponent } from './components/main-block/dreams-pattern/dreams-pattern.component';
-import { DreamsStatisticComponent } from './components/main-block/dreams-statistic/dreams-statistic.component';
-import { DreamCreateComponent } from './components/main-block/my-dreams/dream-create/dream-create.component';
+import { MenuComponent } from './content/dream-catcher/menu/menu.component';
+import { MyDreamsComponent } from './content/dream-catcher/main-block/my-dreams/my-dreams.component';
+import { DreamsPatternComponent } from './content/dream-catcher/main-block/dreams-pattern/dreams-pattern.component';
+import { DreamsStatisticComponent } from './content/dream-catcher/main-block/dreams-statistic/dreams-statistic.component';
+import { DreamCreateComponent } from './content/dream-catcher/main-block/my-dreams/dream-create/dream-create.component';
 
-import { MoodParserPipe } from './pipes/mood-parser.pipe';
-import { DateParserPipe } from './pipes/date-parser.pipe';
+import { MoodParserPipe } from './shared/pipes/mood-parser.pipe';
+import { DateParserPipe } from './shared/pipes/date-parser.pipe';
 
 @NgModule({
   declarations: [
@@ -44,8 +44,8 @@ import { DateParserPipe } from './pipes/date-parser.pipe';
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  constructor() {
+export class AppModule {
+  public constructor() {
     library.add(fas);
   }
 }

@@ -1,14 +1,14 @@
 export interface IDream {
   date: {
     day: string, // 2 numbers
-    month: string, 
+    month: string,
     year: string,
     fullDate: string // YYYY-MM-DD
-  }; 
+  };
   title: string;
   text: string;
   mood: number;
-  tags: Array<string>;
+  tags: string[];
   conscious: boolean;
   nightmare: boolean;
 }

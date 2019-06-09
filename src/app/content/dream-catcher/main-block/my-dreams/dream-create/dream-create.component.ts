@@ -60,7 +60,6 @@ export class DreamCreateComponent implements OnInit {
   }
 
   public changeMood(event) {
-    console.log(this.dreamForm.get('date').value);
     this.dreamForm.get('mood').setValue(event.value);
     this.amountMood = event.value;
   }

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { MyDreamsComponent } from './components/main-block/my-dreams/my-dreams.component';
-import { DreamsPatternComponent } from './components/main-block/dreams-pattern/dreams-pattern.component';
-import { DreamsStatisticComponent } from './components/main-block/dreams-statistic/dreams-statistic.component';
+import { MyDreamsComponent } from './content/dream-catcher/main-block/my-dreams/my-dreams.component';
+import { DreamsPatternComponent } from './content/dream-catcher/main-block/dreams-pattern/dreams-pattern.component';
+import { DreamsStatisticComponent } from './content/dream-catcher/main-block/dreams-statistic/dreams-statistic.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/my-dreams', pathMatch: 'full' },
